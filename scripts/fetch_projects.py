@@ -146,9 +146,9 @@ for repo in public_repos:
     DATA_JSON[repo_full_name]["watchers"] = DATA_JSON[repo_full_name]["watchers"]["totalCount"]
 
 # Save to _data directory
-file_path = PATH_TO_DATA + "/" + "projects.json"
-with open(file_path, "w+") as f:
-    json.dump(DATA_JSON, f)
+# file_path = PATH_TO_DATA + "/" + "projects.json"
+# with open(file_path, "w+") as f:
+#     json.dump(DATA_JSON, f)
 print("LOG: Saved to", file_path)
 
 
