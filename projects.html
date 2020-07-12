@@ -32,9 +32,9 @@ custom_js: projects.js
 <!-- End of all-projects -->
 <script type="text/javascript" src="_data/projects.json">
 </script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     let allProjects = [];
-    {% for item in site.data.projects %}
+    {% for item in projects %}
         allProjects.push({
             name: "{{ item[1]["name"] }}",
             nameWithOwner: "{{ item[1]["nameWithOwner"] }}",
@@ -50,6 +50,6 @@ custom_js: projects.js
             watchers : "{{ item[1]["watchers"] }}",
         })
     {% endfor %}
-</script> -->
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" async></script>
