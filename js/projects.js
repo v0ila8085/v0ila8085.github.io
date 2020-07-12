@@ -124,7 +124,8 @@ var sortFunction = function(a, b) {
 
 // Sort and Render
 allProjects.sort(sortFunction)
-renderProjects(allProjects)
+// renderProjects(allProjects)
+renderPapers(allProjects)
 
 
 /* Search implementation starts */
@@ -227,3 +228,113 @@ function oneColumn(mediaQuery) {
     }
 }
 
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// https://stackoverflow.com/a/7419630
+function getRandomColor() {
+  return Math.floor(Math.random()*0xffffff).toString(16);
+}
+
+/* Create project cards */
+var renderPapers = function(projectsList, searchString="") {
+    // Parent div to hold all the project cards
+    var mainDiv = document.getElementsByClassName("all-papers")[0]
+
+    // Refer this for DOM manipulation with JS https://stackoverflow.com/questions/14094697/how-to-create-new-div-dynamically-change-it-move-it-modify-it-in-every-way-po
+    if (projectsList.length > 0) {
+        for (var project of projectsList) {
+            // Div for each project
+            var projectDiv = document.createElement('div')
+            projectDiv.className = "Grid-cell u-size1of3 project-card"
+
+            // Project Name
+            var nameDiv = document.createElement('h1')
+            nameDiv.className = "project-name small-margin"
+            nameDiv.innerHTML = project.title
+            projectDiv.appendChild(nameDiv)
+
+            // Color-coded border
+            var colorDiv = document.createElement('div')
+            colorDiv.className = "border small-margin"
+            colorDiv.style = "border-bottom-color: " + getRandomColor()
+            projectDiv.appendChild(colorDiv)
+
+            // Project Description (HTML version)
+            var descriptionDiv = document.createElement('div')
+            descriptionDiv.className = "project-description xsmall-margin"
+            descriptionDiv.innerHTML = project.description
+            projectDiv.appendChild(descriptionDiv)
+
+            // Primary Language
+            var languageDiv = document.createElement('p')
+            languageDiv.className = "project-language"
+            languageDiv.innerHTML = project.primaryLanguage
+            projectDiv.appendChild(languageDiv)
+
+            // Whitespace
+            var whitespaceDiv = document.createElement('div')
+            whitespaceDiv.className = "whitespace"
+            projectDiv.appendChild(whitespaceDiv)
+
+            // Project Links
+            var projectLinksDiv = document.createElement('div')
+            projectLinksDiv.className = "project-links"
+
+            // GitHub link
+            var githubLink = document.createElement('a')
+            githubLink.href = getGithubURL(project)
+            githubLink.innerHTML = "GitHub"
+            githubLink.target = "_blank"
+            projectLinksDiv.appendChild(githubLink)
+
+            // Website link (with clause)
+            var homepageURL = getHomepageURL(project)
+            if (homepageURL != "") {
+                var websiteLink = document.createElement('a')
+                websiteLink.href = homepageURL
+                websiteLink.innerHTML = "Website"
+                websiteLink.target = "_blank"
+                projectLinksDiv.appendChild(websiteLink)
+            }
+
+            projectDiv.appendChild(projectLinksDiv)
+
+            // Metrics button
+            var metricsButton = document.createElement('button')
+            metricsButton.setAttribute("onclick", "window.open('https://opensource.twitter.com/metrics/" + project.nameWithOwner + "/WEEKLY')")
+            metricsButton.type = "button"
+            metricsButton.className = "Button Button--tertiary"
+            metricsButton.innerHTML = "Metrics"
+            projectDiv.appendChild(metricsButton)
+
+            /* Finally Add the project card to the page */
+            mainDiv.appendChild(projectDiv)
+        }
+    } else {
+        var noResultDiv = document.createElement('div')
+        noResultDiv.className = 'no-results'
+
+        var noResultPara = document.createElement('p')
+        noResultPara.innerHTML = "No results for " + '<b>' + searchString + '</b>'
+        noResultDiv.appendChild(noResultPara)
+
+        var noResultContainer = document.getElementsByClassName("no-results-container")[0]
+        noResultContainer.appendChild(noResultDiv)
+    }
+    // Apply functions that determine how many columns
+    if (matchMedia) {
+        var mq3 = window.matchMedia("(min-width: 1236px)")
+        var mq2 = window.matchMedia("(max-width: 1236px) and (min-width: 850px)")
+        var mq1 = window.matchMedia("(max-width: 850px)")
+        threeColumn(mq3)
+        twoColumn(mq2)
+        oneColumn(mq1)
+    }
+}

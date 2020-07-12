@@ -28,14 +28,14 @@ custom_js: projects.js
 <div class="Grid container no-results-container"></div>
 
 <!-- Projects grid (See renderProjects() in projects.js) -->
-<div class="Grid container all-projects"></div>
+<div class="Grid container all-papers"></div>
 <!-- End of all-projects -->
 
 <script type="text/javascript">
     let allProjects = [];
     {% for item in site.data.projects %}
         allProjects.push({
-            name: "{{ item[1]["name"] }}",
+            title: "{{ item[1]["name"] }}",
             nameWithOwner: "{{ item[1]["nameWithOwner"] }}",
             description: `{{ item[1]["descriptionHTML"] }}`,
             color: "{{ item[1]["primaryLanguage"]["color"] }}",
