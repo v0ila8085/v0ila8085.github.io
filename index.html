@@ -36,11 +36,13 @@ custom_js: projects.js
     {% for item in site.data.papers %}
         
         const authors = [];
+        
         {% for author in item.authors %}
             authors.push(
                 author['name']
             )
         {% endfor %}
+
         allProjects.push({
             title: "{{ item[1]["title"] }}",
             abstract: `{{ item[1]["abstract"] }}`,
