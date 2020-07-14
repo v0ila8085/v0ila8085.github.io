@@ -39,7 +39,7 @@ custom_js: projects.js
         var authors = [];
         
         {% for author in item[1].authors %}
-            authors.push(author)
+            authors.push(`{{author}}`)
         {% endfor %}
 
         allProjects.push({
