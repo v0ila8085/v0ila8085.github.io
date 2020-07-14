@@ -15,7 +15,7 @@ install:
 
 script:
   - if [ $TRAVIS_EVENT_TYPE == "cron" ];
-    then python scripts/fetch_projects.py;
+    then python scripts/fetch_papers.py;
     else echo "Not triggered by cron";
     fi;
 

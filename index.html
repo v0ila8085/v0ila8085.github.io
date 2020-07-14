@@ -33,7 +33,7 @@ custom_js: projects.js
 
 <script type="text/javascript">
     let allProjects = [];
-    {% for item in site.data.projects %}
+    {% for item in site.data.papers %}
         allProjects.push({
             title: "{{ item[1]["name"] }}",
             nameWithOwner: "{{ item[1]["nameWithOwner"] }}",
