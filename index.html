@@ -34,19 +34,11 @@ custom_js: projects.js
 <script type="text/javascript">
     let allProjects = [];
     {% for item in site.data.papers %}
-        
-        const authors = [];
-        
-        {% for author in item.authors %}
-            authors.push(
-                author['name']
-            )
-        {% endfor %}
 
         allProjects.push({
             title: "{{ item[1]["title"] }}",
             abstract: `{{ item[1]["abstract"] }}`,
-            authors: authors,
+            authors: "{{ item[1]["authors"] }}",
             color: "{{ item[1]["primaryLanguage"]["color"] }}",
             primaryLanguage: "{{ item[1]["primaryLanguage"]["name"] }}",
             homepageURL: "{{ item[1]["url"] }}",
