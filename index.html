@@ -37,22 +37,23 @@ custom_js: projects.js
     {% for item in site.data.papers %}
         
         var authors = [];
+        var tags = [];
         
         {% for author in item[1].authors %}
             authors.push("{{author}}")
+        {% endfor %}
+
+        {% for tag in item[1].tags %}
+            tags.push("{{tag}}")
         {% endfor %}
 
         allProjects.push({
             title: `{{ item[1]["title"] }}`,
             abstract: `{{ item[1]["abstract"] }}`,
             authors: authors,
-            color: `{{ item[1]["primaryLanguage"]["color"] }}`,
-            primaryLanguage: `{{ item[1]["primaryLanguage"]["name"] }}`,
             homepageURL: `{{ item[1]["url"] }}`,
             localFile : `{{ item[1]["localFile"] }}`,
-            languages : `{{ item[1]["languages"] }}`,
-            forks : `{{ item[1]["forkCount"] }}`,
-            topics : `{{ item[1]["repositoryTopics"] }}`,
+            tags : tags,
             stars : `{{ item[1]["stargazers"] }}`,
             watchers : `{{ item[1]["watchers"] }}`,
         })
