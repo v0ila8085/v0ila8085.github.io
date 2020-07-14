@@ -296,12 +296,15 @@ var renderPapers = function(projectsList, searchString="") {
             // authors
             var authorsDiv = document.createElement('div')
             authorsDiv.className = "project-links"
+            
             var authorsOl = document.createElement('ol');
+
             for(var author in project.authors) {
                 var auth = document.createElement('li') 
                 auth.innerText = author
                 authorsOl.appendChild(auth)
             }
+
             authorsDiv.appendChild(authorsOl)
             // var languageDiv = document.createElement('p')
             // languageDiv.className = "project-language"
