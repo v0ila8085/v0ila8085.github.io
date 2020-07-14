@@ -298,10 +298,10 @@ var renderPapers = function(projectsList, searchString="") {
             authorsDiv.className = "project-links"
 
             var authorsOl = document.createElement('ul');
-
-            for(var author in project.authors) {
+            const authors = project.authors;
+            for(var i in authors) {
                 var auth = document.createElement('li') 
-                auth.innerHTML = author
+                auth.innerHTML = authors[i]
                 authorsOl.appendChild(auth)
             }
 
