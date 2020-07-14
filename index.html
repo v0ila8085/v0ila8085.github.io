@@ -33,6 +33,7 @@ custom_js: projects.js
 
 <script type="text/javascript">
     let allProjects = [];
+    
     {% for item in site.data.papers %}
         
         var authors = [];
@@ -42,18 +43,18 @@ custom_js: projects.js
         {% endfor %}
 
         allProjects.push({
-            title: "{{ item[1]["title"] }}",
+            title: `{{ item[1]["title"] }}`,
             abstract: `{{ item[1]["abstract"] }}`,
             authors: authors,
-            color: "{{ item[1]["primaryLanguage"]["color"] }}",
-            primaryLanguage: "{{ item[1]["primaryLanguage"]["name"] }}",
-            homepageURL: "{{ item[1]["url"] }}",
-            localFile : "{{ item[1]["localFile"] }}",
-            languages : "{{ item[1]["languages"] }}",
-            forks : "{{ item[1]["forkCount"] }}",
-            topics : "{{ item[1]["repositoryTopics"] }}",
-            stars : "{{ item[1]["stargazers"] }}",
-            watchers : "{{ item[1]["watchers"] }}",
+            color: `{{ item[1]["primaryLanguage"]["color"] }}`,
+            primaryLanguage: `{{ item[1]["primaryLanguage"]["name"] }}`,
+            homepageURL: `{{ item[1]["url"] }}`,
+            localFile : `{{ item[1]["localFile"] }}`,
+            languages : `{{ item[1]["languages"] }}`,
+            forks : `{{ item[1]["forkCount"] }}`,
+            topics : `{{ item[1]["repositoryTopics"] }}`,
+            stars : `{{ item[1]["stargazers"] }}`,
+            watchers : `{{ item[1]["watchers"] }}`,
         })
     {% endfor %}
 </script>
