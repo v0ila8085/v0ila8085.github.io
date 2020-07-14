@@ -37,7 +37,7 @@ custom_js: projects.js
         allProjects.push({
             title: "{{ item[1]["title"] }}",
             abstract: `{{ item[1]["abstract"] }}`,
-            authors: `{{ JSON.parse(item[1]["authors"]) }}`,
+            authors: `{{ item[1]["authors"] }}`,
             color: "{{ item[1]["primaryLanguage"]["color"] }}",
             primaryLanguage: "{{ item[1]["primaryLanguage"]["name"] }}",
             homepageURL: "{{ item[1]["url"] }}",
