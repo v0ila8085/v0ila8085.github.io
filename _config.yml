@@ -38,3 +38,9 @@ markdown: kramdown
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  - scope:
+      path: "_data/papers"
+    values:
+      image: true
