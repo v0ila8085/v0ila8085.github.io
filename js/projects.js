@@ -333,7 +333,7 @@ var renderPapers = function(projectsList, searchString="") {
 
             // Website link (with clause)
             var websiteLink = document.createElement('a')
-            websiteLink.href = localFile
+            websiteLink.href = project.localFile
             websiteLink.innerHTML = "pdf"
             websiteLink.target="_blank"
             projectLinksDiv.appendChild(websiteLink)
