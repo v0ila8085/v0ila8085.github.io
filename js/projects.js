@@ -167,7 +167,7 @@ document.addEventListener('keyup', function(event) {
     searchResult = findMatches(searchString, allProjects)
 
     // Remove all the projects
-    var mainDiv = document.getElementsByClassName("all-projects")[0]
+    var mainDiv = document.getElementsByClassName("all-papers")[0]
     while (mainDiv.firstChild) {
         mainDiv.removeChild(mainDiv.firstChild)
     }
