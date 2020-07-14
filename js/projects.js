@@ -319,6 +319,7 @@ var renderPapers = function(projectsList, searchString="") {
             var githubLink = document.createElement('a')
             githubLink.href = project.homepageURL
             githubLink.innerHTML = "URL"
+            githubLink.target="_blank"
             projectLinksDiv.appendChild(githubLink)
 
             // Website link (with clause)
@@ -327,6 +328,7 @@ var renderPapers = function(projectsList, searchString="") {
                 var websiteLink = document.createElement('a')
                 websiteLink.href = localFile
                 websiteLink.innerHTML = "pdf"
+                websiteLink.target="_blank"
                 projectLinksDiv.appendChild(websiteLink)
             }
 
