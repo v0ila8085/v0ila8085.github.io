@@ -300,7 +300,7 @@ var renderPapers = function(projectsList, searchString="") {
 
             // authors
             var authorsDiv = document.createElement('div')
-            authorsDiv.className = "project-links"
+            // authorsDiv.className = "project-links"
 
             var authorsOl = document.createElement('ul');
             const authors = project.authors;
@@ -318,16 +318,12 @@ var renderPapers = function(projectsList, searchString="") {
             var whitespaceDiv = document.createElement('div')
             whitespaceDiv.className = "whitespace"
             projectDiv.appendChild(whitespaceDiv)
-            
-            // Whitespace
-            var whitespaceDiv = document.createElement('div')
-            whitespaceDiv.className = "whitespace"
-            projectDiv.appendChild(whitespaceDiv)
 
             // Project Links
             var projectLinksDiv = document.createElement('div')
             projectLinksDiv.className = "project-links"
 
+            
             // GitHub link
             var githubLink = document.createElement('a')
             githubLink.href = project.homepageURL
