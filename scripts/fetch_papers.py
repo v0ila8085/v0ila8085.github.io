@@ -14,5 +14,5 @@ for paper in papers:
         papers_json[paper['title']]  = paper
 
 with open(f"{PATH_TO_DATA}/papers.json","w")as f:
-    f.write(json.dumps(paper))
+    f.write(json.dumps(papers))
 
