@@ -54,8 +54,6 @@ custom_js: projects.js
             homepageURL: `{{ item[1]["url"] }}`,
             localFile : `{{ item[1]["localFile"] }}`,
             tags : tags,
-            stars : `{{ item[1]["stargazers"] }}`,
-            watchers : `{{ item[1]["watchers"] }}`,
         })
     {% endfor %}
 </script>
