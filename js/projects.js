@@ -301,7 +301,7 @@ var renderPapers = function(projectsList, searchString="") {
 
             for(var author in project.authors) {
                 var auth = document.createElement('li') 
-                auth.innerHTML = author['name']
+                auth.innerHTML = author
                 authorsOl.appendChild(auth)
             }
 
