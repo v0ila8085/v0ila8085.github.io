@@ -297,8 +297,8 @@ var renderPapers = function(projectsList, searchString="") {
             var authorsDiv = document.createElement('div')
             authorsDiv.className = "project-links"
 
-            var authorsOl = document.createElement('ol');
-
+            var authorsOl = document.createElement('ul');
+            
             for(var author in project.authors) {
                 var auth = document.createElement('li') 
                 auth.innerText = author['name']
