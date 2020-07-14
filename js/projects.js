@@ -269,7 +269,7 @@ var renderPapers = function(projectsList, searchString="") {
             // Project Description (HTML version)
             var descriptionDiv = document.createElement('div')
             descriptionDiv.className = "project-description xsmall-margin"
-            descriptionDiv.innerHTML = project.description
+            descriptionDiv.innerHTML = project.abstract
             projectDiv.appendChild(descriptionDiv)
 
             // Primary Language
@@ -290,9 +290,9 @@ var renderPapers = function(projectsList, searchString="") {
             // GitHub link
             var githubLink = document.createElement('a')
             githubLink.href = getGithubURL(project)
-            githubLink.innerHTML = "GitHub"
+            githubLink.innerHTML = "URL"
             githubLink.target = "_blank"
-            projectLinksDiv.appendChild(githubLink)
+            projectLinksDiv.appendChild(project.url)
 
             // Website link (with clause)
             var homepageURL = getHomepageURL(project)
