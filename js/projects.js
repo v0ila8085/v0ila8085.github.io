@@ -293,11 +293,12 @@ var renderPapers = function(projectsList, searchString="") {
             descriptionDiv.innerHTML = project.abstract
             projectDiv.appendChild(descriptionDiv)
 
-            // Whitespace
-            var whitespaceDiv = document.createElement('div')
-            whitespaceDiv.className = "whitespace"
-            projectDiv.appendChild(whitespaceDiv)
-            
+            // Color-coded border
+            var colorDiv = document.createElement('div')
+            colorDiv.className = "border small-margin"
+            colorDiv.style = "border-bottom-color: #" + getRandomColor()
+            projectDiv.appendChild(colorDiv)
+
             // authors
             var authorsDiv = document.createElement('div')
             authorsDiv.className = "project-links"
@@ -314,6 +315,12 @@ var renderPapers = function(projectsList, searchString="") {
             authorsDiv.appendChild(authorsOl)
 
             projectDiv.appendChild(authorsDiv)
+
+            // Color-coded border
+            var colorDiv = document.createElement('div')
+            colorDiv.className = "border small-margin"
+            colorDiv.style = "border-bottom-color: #" + getRandomColor()
+            projectDiv.appendChild(colorDiv)
             
             // Whitespace
             var whitespaceDiv = document.createElement('div')
