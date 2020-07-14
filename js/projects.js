@@ -14,7 +14,7 @@ var customWebsiteURL = {
 }
 
 var getHomepageURL = function(project) {
-    return customWebsiteURL[project.nameWithOwner] || project.homepageURL
+    return customWebsiteURL[project.nameWithOwner] || project.localFile
 }
 
 /* Create project cards */
@@ -319,8 +319,8 @@ var renderPapers = function(projectsList, searchString="") {
             if (homepageURL != "") {
                 var websiteLink = document.createElement('a')
                 websiteLink.href = homepageURL
-                websiteLink.innerHTML = "Website"
-                websiteLink.target = project.local
+                websiteLink.innerHTML = "pdf"
+                websiteLink.target = project.localFile
                 projectLinksDiv.appendChild(websiteLink)
             }
 
