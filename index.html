@@ -33,12 +33,12 @@ custom_js: projects.js
 
 <script type="text/javascript">
     let allProjects = [];
-    
+
     {% for item in site.data.papers %}
         
         var authors = [];
         
-        {% for author in item.authors %}
+        {% for author in item.tags %}
             authors.push(author)
         {% endfor %}
 
