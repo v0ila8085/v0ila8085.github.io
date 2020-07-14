@@ -35,8 +35,9 @@ custom_js: projects.js
     let allProjects = [];
     {% for item in site.data.papers %}
 
-        const authors = JSON.parse(`{{item[1]["authors"]}}`)
+        
         console.log(`{{item[1]["authors"]}}`)
+        const authors = JSON.parse(`{{item[1]["authors"]}}`)
         allProjects.push({
             title: "{{ item[1]["title"] }}",
             abstract: `{{ item[1]["abstract"] }}`,
