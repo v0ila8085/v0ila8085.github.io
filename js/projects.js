@@ -317,18 +317,16 @@ var renderPapers = function(projectsList, searchString="") {
 
             // GitHub link
             var githubLink = document.createElement('a')
-            githubLink.href = getGithubURL(project)
+            githubLink.href = project.homepageURL
             githubLink.innerHTML = "URL"
-            githubLink.target = project.homepageURL
             projectLinksDiv.appendChild(githubLink)
 
             // Website link (with clause)
-            var homepageURL = getHomepageURL(project)
-            if (homepageURL != "") {
+            var localFile = getHomepageURL(project)
+            if (localFile != "") {
                 var websiteLink = document.createElement('a')
-                websiteLink.href = homepageURL
+                websiteLink.href = localFile
                 websiteLink.innerHTML = "pdf"
-                websiteLink.target = project.localFile
                 projectLinksDiv.appendChild(websiteLink)
             }
 
