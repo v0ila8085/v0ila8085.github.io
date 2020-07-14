@@ -294,11 +294,17 @@ var renderPapers = function(projectsList, searchString="") {
             projectDiv.appendChild(descriptionDiv)
 
             // authors
-            var authors = document.createElement('ol')
+            var authorsOl = document.createElement('ol');
+            for(var author in project.authors) {
+                var auth = document.createElement('li') 
+                auth.innerText = author
+                authorsOl.appendChild(auth)
+            }
+
             // var languageDiv = document.createElement('p')
             // languageDiv.className = "project-language"
             // languageDiv.innerHTML = project.primaryLanguage
-            // projectDiv.appendChild(languageDiv)
+            projectDiv.appendChild(authorsOl)
             
             // Whitespace
             var whitespaceDiv = document.createElement('div')
@@ -329,12 +335,12 @@ var renderPapers = function(projectsList, searchString="") {
             projectDiv.appendChild(projectLinksDiv)
 
             // Metrics button
-            var metricsButton = document.createElement('button')
-            metricsButton.setAttribute("onclick", "window.open('https://opensource.twitter.com/metrics/" + project.nameWithOwner + "/WEEKLY')")
-            metricsButton.type = "button"
-            metricsButton.className = "Button Button--tertiary"
-            metricsButton.innerHTML = "Metrics"
-            projectDiv.appendChild(metricsButton)
+            // var metricsButton = document.createElement('button')
+            // metricsButton.setAttribute("onclick", "window.open('https://opensource.twitter.com/metrics/" + project.nameWithOwner + "/WEEKLY')")
+            // metricsButton.type = "button"
+            // metricsButton.className = "Button Button--tertiary"
+            // metricsButton.innerHTML = "Metrics"
+            // projectDiv.appendChild(metricsButton)
 
             /* Finally Add the project card to the page */
             mainDiv.appendChild(projectDiv)
