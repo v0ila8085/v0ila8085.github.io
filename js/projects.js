@@ -294,17 +294,18 @@ var renderPapers = function(projectsList, searchString="") {
             projectDiv.appendChild(descriptionDiv)
 
             // authors
+            var authorsDiv = document.createElement('div')
             var authorsOl = document.createElement('ol');
             for(var author in project.authors) {
                 var auth = document.createElement('li') 
                 auth.innerText = author
                 authorsOl.appendChild(auth)
             }
-
+            authorsDiv.appendChild(authorsOl)
             // var languageDiv = document.createElement('p')
             // languageDiv.className = "project-language"
             // languageDiv.innerHTML = project.primaryLanguage
-            projectDiv.appendChild(authorsOl)
+            projectDiv.appendChild(authorsDiv)
             
             // Whitespace
             var whitespaceDiv = document.createElement('div')
