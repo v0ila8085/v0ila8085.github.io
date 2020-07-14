@@ -318,6 +318,11 @@ var renderPapers = function(projectsList, searchString="") {
             var whitespaceDiv = document.createElement('div')
             whitespaceDiv.className = "whitespace"
             projectDiv.appendChild(whitespaceDiv)
+            
+            // Whitespace
+            var whitespaceDiv = document.createElement('div')
+            whitespaceDiv.className = "whitespace"
+            projectDiv.appendChild(whitespaceDiv)
 
             // Project Links
             var projectLinksDiv = document.createElement('div')
