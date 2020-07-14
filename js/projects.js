@@ -97,7 +97,7 @@ var renderProjects = function(projectsList, searchString="") {
         noResultDiv.className = 'no-results'
 
         var noResultPara = document.createElement('p')
-        noResultPara.innerHTML = "No results for " + '<b>' + searchString + '</b>'
+        noResultPara.innerHTML = "No results!"
         noResultDiv.appendChild(noResultPara)
 
         var noResultContainer = document.getElementsByClassName("no-results-container")[0]
@@ -143,9 +143,9 @@ function findMatches(query, repos) {
         maxPatternLength: 50,
         minMatchCharLength: 1,
         keys: [
-          "name",
-          "languages",
-          "description"
+          "title",
+          "authors",
+          "abstract"
         ]
       }
       var fuse = new Fuse(repos, options)
@@ -313,7 +313,6 @@ var renderPapers = function(projectsList, searchString="") {
             }
 
             authorsDiv.appendChild(authorsOl)
-
             projectDiv.appendChild(authorsDiv)
 
             // Color-coded border
@@ -366,7 +365,7 @@ var renderPapers = function(projectsList, searchString="") {
         noResultDiv.className = 'no-results'
 
         var noResultPara = document.createElement('p')
-        noResultPara.innerHTML = "No results for " + '<b>' + searchString + '</b>'
+        noResultPara.innerHTML = "No results! "
         noResultDiv.appendChild(noResultPara)
 
         var noResultContainer = document.getElementsByClassName("no-results-container")[0]
