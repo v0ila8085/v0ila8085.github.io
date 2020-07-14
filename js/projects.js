@@ -247,6 +247,26 @@ var renderPapers = function(projectsList, searchString="") {
     // Parent div to hold all the project cards
     var mainDiv = document.getElementsByClassName("all-papers")[0]
 
+    // {
+    //     'title':'A Review of Machine Learning Applications in Fuzzing',
+    //     'authors':[
+    //         {'name':'Gary J Saavedra','contact':'gjsaave@sandia.gov'},
+    //         {'name':'Kathryn N Rodhouse','contact':'knrodho@sandia.gov'},
+    //         {'name':'Daniel M Dunlavy','contact':'dmdunla@sandia.gov'},
+    //         {'name':'Philip W Kegelmeyer''contact':'wpk@sandia.gov'},
+    //     ],
+    //     'abstract':'Fuzzing has played an important role in improving software development and testing over the course of several decades. Recent research in fuzzing has focused on applications of machine learning (ML), offering useful tools to overcome challenges in the fuzzing process. This review surveys the current research in applying ML to fuzzing. Specifically, this review discusses successful applications of ML to fuzzing, briefly explores challenges encountered, and motivates fu- ture research to address fuzzing bottlenecks.',
+    //     'tags':[
+    //         'Fuzzer', 
+    //         'fuzzing process', 
+    //         'machine learning applications', 
+    //         'vulnerability assessment', 
+    //         'symbolic execution'
+    //         ],
+    //     'url': 'https://arxiv.org/pdf/1906.11133',
+    // }
+
+    
     // Refer this for DOM manipulation with JS https://stackoverflow.com/questions/14094697/how-to-create-new-div-dynamically-change-it-move-it-modify-it-in-every-way-po
     if (projectsList.length > 0) {
         for (var project of projectsList) {
@@ -291,8 +311,8 @@ var renderPapers = function(projectsList, searchString="") {
             var githubLink = document.createElement('a')
             githubLink.href = getGithubURL(project)
             githubLink.innerHTML = "URL"
-            githubLink.target = "_blank"
-            projectLinksDiv.appendChild(project.url)
+            githubLink.target = project.url
+            projectLinksDiv.appendChild(githubLink)
 
             // Website link (with clause)
             var homepageURL = getHomepageURL(project)
@@ -300,7 +320,7 @@ var renderPapers = function(projectsList, searchString="") {
                 var websiteLink = document.createElement('a')
                 websiteLink.href = homepageURL
                 websiteLink.innerHTML = "Website"
-                websiteLink.target = "_blank"
+                websiteLink.target = project.local
                 projectLinksDiv.appendChild(websiteLink)
             }
 
