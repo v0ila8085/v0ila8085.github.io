@@ -35,13 +35,12 @@ custom_js: projects.js
     let allProjects = [];
     {% for item in site.data.papers %}
         allProjects.push({
-            title: "{{ item[1]["name"] }}",
-            nameWithOwner: "{{ item[1]["nameWithOwner"] }}",
-            description: `{{ item[1]["descriptionHTML"] }}`,
+            title: "{{ item[1]["title"] }}",
+            abstract: `{{ item[1]["abstract"] }}`,
             color: "{{ item[1]["primaryLanguage"]["color"] }}",
             primaryLanguage: "{{ item[1]["primaryLanguage"]["name"] }}",
-            homepageURL: "{{ item[1]["homepageUrl"] }}",
-            pushedAt : "{{ item[1]["pushedAt"] }}",
+            homepageURL: "{{ item[1]["url"] }}",
+            localFile : "{{ item[1]["localFile"] }}",
             languages : "{{ item[1]["languages"] }}",
             forks : "{{ item[1]["forkCount"] }}",
             topics : "{{ item[1]["repositoryTopics"] }}",

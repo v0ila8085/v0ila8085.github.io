@@ -312,7 +312,7 @@ var renderPapers = function(projectsList, searchString="") {
             var githubLink = document.createElement('a')
             githubLink.href = getGithubURL(project)
             githubLink.innerHTML = "URL"
-            githubLink.target = project.url
+            githubLink.target = project.homepageURL
             projectLinksDiv.appendChild(githubLink)
 
             // Website link (with clause)
