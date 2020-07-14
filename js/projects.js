@@ -332,14 +332,11 @@ var renderPapers = function(projectsList, searchString="") {
             projectLinksDiv.appendChild(githubLink)
 
             // Website link (with clause)
-            var localFile = getHomepageURL(project)
-            if (localFile != "") {
-                var websiteLink = document.createElement('a')
-                websiteLink.href = localFile
-                websiteLink.innerHTML = "pdf"
-                websiteLink.target="_blank"
-                projectLinksDiv.appendChild(websiteLink)
-            }
+            var websiteLink = document.createElement('a')
+            websiteLink.href = localFile
+            websiteLink.innerHTML = "pdf"
+            websiteLink.target="_blank"
+            projectLinksDiv.appendChild(websiteLink)
 
             projectDiv.appendChild(projectLinksDiv)
 
