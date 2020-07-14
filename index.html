@@ -38,7 +38,7 @@ custom_js: projects.js
         
         var authors = [];
         
-        {% for author in item.tags %}
+        {% for author in item[1].authors %}
             authors.push(author)
         {% endfor %}
 
