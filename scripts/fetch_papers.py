@@ -8,10 +8,10 @@ papers = glob.glob(f"{PATH_TO_DATA}/*.json")
 
 papers_json = {}
 
-for paper in papers:
-    papers_json[paper['title']]  = paper
-    papers_json[paper['title']]['authors'] = " ".join([i['name'] for i in paper['authors']])
-    papers_json[paper['title']]['localFile'] = f"{PATH_TO_DATA}/papers/{paper['title']}"
+# for paper in papers:
+#     papers_json[paper['title']]  = paper
+#     papers_json[paper['title']]['authors'] = " ".join([i['name'] for i in paper['authors']])
+#     papers_json[paper['title']]['localFile'] = f"{PATH_TO_DATA}/papers/{paper['title']}"
 
 with open(f"{PATH_TO_DATA}/papers.json","w")as f:
     f.write(json.dumps(paper))
