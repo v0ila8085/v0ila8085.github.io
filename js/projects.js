@@ -294,9 +294,9 @@ var renderPapers = function(projectsList, searchString="") {
             projectDiv.appendChild(descriptionDiv)
 
             // Whitespace
-            var whitespaceDiv = document.createElement('div')
-            whitespaceDiv.className = "whitespace"
-            projectDiv.appendChild(whitespaceDiv)
+            // var whitespaceDiv = document.createElement('div')
+            // whitespaceDiv.className = "whitespace"
+            // projectDiv.appendChild(whitespaceDiv)
 
             // authors
             var authorsDiv = document.createElement('div')
@@ -314,10 +314,10 @@ var renderPapers = function(projectsList, searchString="") {
             authorsDiv.appendChild(authorsOl)
             projectDiv.appendChild(authorsDiv)
 
-            // Whitespace
-            var whitespaceDiv = document.createElement('div')
-            whitespaceDiv.className = "whitespace"
-            projectDiv.appendChild(whitespaceDiv)
+            // // Whitespace
+            // var whitespaceDiv = document.createElement('div')
+            // whitespaceDiv.className = "whitespace"
+            // projectDiv.appendChild(whitespaceDiv)
 
             // Project Links
             var projectLinksDiv = document.createElement('div')
