@@ -180,7 +180,7 @@ document.addEventListener('keyup', function(event) {
     for (var item of searchResult) {
         newProjectsList.push(item)
     }
-    renderProjects(newProjectsList, searchString=searchBox.value)
+    renderPapers(newProjectsList, searchString=searchBox.value)
 })
 
 /* Search implementation ends */
@@ -271,6 +271,7 @@ var renderPapers = function(projectsList, searchString="") {
     if (projectsList.length > 0) {
         for (var project of projectsList) {
             // Div for each project
+            console.log(projectsList)
             var projectDiv = document.createElement('div')
             projectDiv.className = "Grid-cell u-size1of3 project-card"
 
