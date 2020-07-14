@@ -293,6 +293,11 @@ var renderPapers = function(projectsList, searchString="") {
             descriptionDiv.innerHTML = project.abstract
             projectDiv.appendChild(descriptionDiv)
 
+            // Whitespace
+            var whitespaceDiv = document.createElement('div')
+            whitespaceDiv.className = "whitespace"
+            projectDiv.appendChild(whitespaceDiv)
+            
             // authors
             var authorsDiv = document.createElement('div')
             authorsDiv.className = "project-links"
