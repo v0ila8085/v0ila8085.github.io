@@ -293,12 +293,13 @@ var renderPapers = function(projectsList, searchString="") {
             descriptionDiv.innerHTML = project.abstract
             projectDiv.appendChild(descriptionDiv)
 
-            // Primary Language
-            var languageDiv = document.createElement('p')
-            languageDiv.className = "project-language"
-            languageDiv.innerHTML = project.primaryLanguage
-            projectDiv.appendChild(languageDiv)
-
+            // authors
+            var authors = document.createElement('ol')
+            // var languageDiv = document.createElement('p')
+            // languageDiv.className = "project-language"
+            // languageDiv.innerHTML = project.primaryLanguage
+            // projectDiv.appendChild(languageDiv)
+            
             // Whitespace
             var whitespaceDiv = document.createElement('div')
             whitespaceDiv.className = "whitespace"

@@ -12,7 +12,7 @@ for paper in papers:
     papers_json[paper['title']]  = paper
     papers_json[paper['title']]['localFile'] = f"{PATH_TO_DATA}/papers/{paper['title']}"
 
-with open(f"{PATH_TO_DATA}/papers.json")as f:
+with open(f"{PATH_TO_DATA}/papers.json","w")as f:
     f.write(json.dumps(paper))
 
 
