@@ -1,8 +1,10 @@
 {
 	"title":"A Review of Machine Learning Applications in Fuzzing",
 	"authors":[
-		"hello",
-		"okay"
+		{"name":"Gary J Saavedra",		"contact":"gjsaave@sandia.gov"},
+		{"name":"Kathryn N Rodhouse",	"contact":"knrodho@sandia.gov"},
+		{"name":"Daniel M Dunlavy",		"contact":"dmdunla@sandia.gov"},
+		{"name":"Philip W Kegelmeyer", 	"contact":"wpk@sandia.gov"},
 	],
 	"abstract":"Fuzzing has played an important role in improving software development and testing over the course of several decades. Recent research in fuzzing has focused on applications of machine learning (ML), offering useful tools to overcome challenges in the fuzzing process. This review surveys the current research in applying ML to fuzzing. Specifically, this review discusses successful applications of ML to fuzzing, briefly explores challenges encountered, and motivates fu- ture research to address fuzzing bottlenecks.",
 	"tags":[
