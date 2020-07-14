@@ -299,16 +299,15 @@ var renderPapers = function(projectsList, searchString="") {
 
             var authorsOl = document.createElement('ul');
             const authors = project.authors;
+
             for(var i in authors) {
                 var auth = document.createElement('li') 
-                auth.innerHTML = authors[i]
+                auth.innerText = authors[i]
                 authorsOl.appendChild(auth)
             }
 
             authorsDiv.appendChild(authorsOl)
-            // var languageDiv = document.createElement('p')
-            // languageDiv.className = "project-language"
-            // languageDiv.innerHTML = project.primaryLanguage
+
             projectDiv.appendChild(authorsDiv)
             
             // Whitespace
