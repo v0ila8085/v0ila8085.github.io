@@ -125,7 +125,7 @@ var sortFunction = function(a, b) {
 // Sort and Render
 allProjects.sort(sortFunction)
 // renderProjects(allProjects)
-renderPapers(allProjects)
+
 
 
 /* Search implementation starts */
@@ -338,3 +338,4 @@ var renderPapers = function(projectsList, searchString="") {
         oneColumn(mq1)
     }
 }
+renderPapers(allProjects)
