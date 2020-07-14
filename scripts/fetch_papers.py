@@ -4,7 +4,7 @@ import glob
 
 PATH_TO_DATA = "_data"
 
-papers = glob.glob(f"papers/*.json")
+papers = glob.glob(f"{PATH_TO_DATA}/papers/*.json")
 
 papers_json = []
 
