@@ -9,7 +9,6 @@ papers = glob.glob(f"papers/*.json")
 papers_json = {}
 
 for paper in papers:
-    print(paper)
     with open(paper,'r') as p:
         paper = json.loads(p.read())
         papers_json[paper['title']]  = paper
