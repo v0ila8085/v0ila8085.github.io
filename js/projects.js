@@ -263,7 +263,7 @@ var renderPapers = function(projectsList, searchString="") {
             // Color-coded border
             var colorDiv = document.createElement('div')
             colorDiv.className = "border small-margin"
-            colorDiv.style = "border-bottom-color: " + getRandomColor()
+            colorDiv.style = "border-bottom-color: #" + getRandomColor()
             projectDiv.appendChild(colorDiv)
 
             // Project Description (HTML version)
@@ -338,4 +338,5 @@ var renderPapers = function(projectsList, searchString="") {
         oneColumn(mq1)
     }
 }
+
 renderPapers(allProjects)
