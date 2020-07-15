@@ -294,8 +294,9 @@ var renderPapers = function(projectsList, searchString="") {
             projectDiv.appendChild(descriptionDiv)
 
             // Whitespace
-            var whitespaceDiv = document.createElement('div')
-            whitespaceDiv.className = "whitespace"
+            var whitespaceDiv = document.createElement('h3')
+            // whitespaceDiv.className = "whitespace"
+            whitespaceDiv.innerText = "Authors"
             projectDiv.appendChild(whitespaceDiv)
 
             // authors
