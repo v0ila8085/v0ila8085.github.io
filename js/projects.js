@@ -323,7 +323,6 @@ var renderPapers = function(projectsList, searchString="") {
             // Project Links
             var projectLinksDiv = document.createElement('div')
             projectLinksDiv.className = "project-links"
-
             
             // GitHub link
             var githubLink = document.createElement('a')
@@ -332,12 +331,12 @@ var renderPapers = function(projectsList, searchString="") {
             githubLink.target="_blank"
             projectLinksDiv.appendChild(githubLink)
 
-            // Website link (with clause)
-            var websiteLink = document.createElement('a')
-            websiteLink.href = project.localFile
-            websiteLink.innerHTML = "pdf"
-            websiteLink.target="_blank"
-            projectLinksDiv.appendChild(websiteLink)
+            // // Website link (with clause)
+            // var websiteLink = document.createElement('a')
+            // websiteLink.href = project.localFile
+            // websiteLink.innerHTML = "pdf"
+            // websiteLink.target="_blank"
+            // projectLinksDiv.appendChild(websiteLink)
 
             projectDiv.appendChild(projectLinksDiv)
 
