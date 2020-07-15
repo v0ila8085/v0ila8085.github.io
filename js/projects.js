@@ -323,7 +323,7 @@ var renderPapers = function(projectsList, searchString="") {
             // Whitespace
             var whitespaceDiv = document.createElement('h3')
             // whitespaceDiv.className = "whitespace"
-            whitespaceDiv.innerText = "Authors"
+            whitespaceDiv.innerText = "Tags"
             projectDiv.appendChild(whitespaceDiv)
 
             // Tags
