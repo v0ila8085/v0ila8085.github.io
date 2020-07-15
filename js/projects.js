@@ -330,14 +330,17 @@ var renderPapers = function(projectsList, searchString="") {
             var tagsDiv = document.createElement('div')
             // authorsDiv.className = "project-links"
 
-            var tagsOl = document.createElement('ul');
-            const tags = project.tags;
-
-            for(var i in tags) {
-                var tag = document.createElement('li')
-                tag.innerText = tags[i]
-                tagsOl.appendChild(tag)
+            var tagsOl = document.createElement('p');
+            var tags = "";
+            
+            for(var i in project.tags) {
+                tags += " "+tags[i]
+                // var tag = document.createElement('li')
+                // tag.innerText = tags[i]
+                // tagsOl.appendChild(tag)
             }
+            tagsOl.innerHTML = tags
+            tagsOl.className = "project-language"
 
             tagsDiv.appendChild(tagsOl)
             projectDiv.appendChild(tagsDiv)
