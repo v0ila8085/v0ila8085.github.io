@@ -331,12 +331,12 @@ var renderPapers = function(projectsList, searchString="") {
             githubLink.target="_blank"
             projectLinksDiv.appendChild(githubLink)
 
-            // // Website link (with clause)
-            // var websiteLink = document.createElement('a')
-            // websiteLink.href = project.localFile
-            // websiteLink.innerHTML = "pdf"
-            // websiteLink.target="_blank"
-            // projectLinksDiv.appendChild(websiteLink)
+            // Website link (with clause)
+            var websiteLink = document.createElement('a')
+            websiteLink.href = "https://raw.githubusercontent.com/v0ila8085/v0ila8085.github.io/master/"+project.localFile
+            websiteLink.innerHTML = "pdf"
+            websiteLink.target="_blank"
+            projectLinksDiv.appendChild(websiteLink)
 
             projectDiv.appendChild(projectLinksDiv)
 
