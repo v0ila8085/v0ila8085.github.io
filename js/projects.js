@@ -334,7 +334,7 @@ var renderPapers = function(projectsList, searchString="") {
             var tags = "";
             
             for(var i in project.tags) {
-                tags += " "+tags[i]
+                tags += " "+project.tags[i]
                 // var tag = document.createElement('li')
                 // tag.innerText = tags[i]
                 // tagsOl.appendChild(tag)
