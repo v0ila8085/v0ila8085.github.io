@@ -321,10 +321,10 @@ var renderPapers = function(projectsList, searchString="") {
             projectDiv.appendChild(whitespaceDiv)
 
             // Whitespace
-            var whitespaceDiv = document.createElement('h3')
-            // whitespaceDiv.className = "whitespace"
-            whitespaceDiv.innerText = "Tags"
-            projectDiv.appendChild(whitespaceDiv)
+            // var whitespaceDiv = document.createElement('h3')
+            // // whitespaceDiv.className = "whitespace"
+            // whitespaceDiv.innerText = "Tags"
+            // projectDiv.appendChild(whitespaceDiv)
 
             // Tags
             var tagsDiv = document.createElement('div')
@@ -333,8 +333,11 @@ var renderPapers = function(projectsList, searchString="") {
             var tagsOl = document.createElement('p');
             var tags = "";
             
-            for(var i in project.tags) {
-                tags += " "+project.tags[i]
+            if (project.tags.length>0)
+                tags = project.tags[0]
+
+            for(var i=1;i<project.tags.length-1; i++) {
+                tags += ", "+project.tags[i]
                 // var tag = document.createElement('li')
                 // tag.innerText = tags[i]
                 // tagsOl.appendChild(tag)
