@@ -328,8 +328,6 @@ var renderPapers = function(projectsList, searchString="") {
 
             // Tags
             var tagsDiv = document.createElement('div')
-            // authorsDiv.className = "project-links"
-
             var tagsOl = document.createElement('p');
             var tags = "";
 
