@@ -320,6 +320,33 @@ var renderPapers = function(projectsList, searchString="") {
             whitespaceDiv.className = "whitespace"
             projectDiv.appendChild(whitespaceDiv)
 
+            // Whitespace
+            var whitespaceDiv = document.createElement('h3')
+            // whitespaceDiv.className = "whitespace"
+            whitespaceDiv.innerText = "Authors"
+            projectDiv.appendChild(whitespaceDiv)
+
+            // Tags
+            var tagsDiv = document.createElement('div')
+            // authorsDiv.className = "project-links"
+
+            var tagsOl = document.createElement('ul');
+            const tags = project.tags;
+
+            for(var i in tags) {
+                var tag = document.createElement('li')
+                tag.innerText = tags[i]
+                tagsOl.appendChild(tag)
+            }
+
+            tagsDiv.appendChild(tagsOl)
+            projectDiv.appendChild(tagsDiv)
+
+            // Whitespace
+            var whitespaceDiv = document.createElement('div')
+            whitespaceDiv.className = "whitespace"
+            projectDiv.appendChild(whitespaceDiv)
+
             // Project Links
             var projectLinksDiv = document.createElement('div')
             projectLinksDiv.className = "project-links"
